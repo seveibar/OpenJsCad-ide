@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<title>OpenJsCad Editor</title>
+		<script src="lightgl.js"></script>
+  		<script src="csg.js"></script>
+  		<script src="openjscad.js"></script>
+  		
+  		<link rel="stylesheet" href="openjscad.css" type="text/css">
+
+  		<link rel="stylesheet" href="cm/lib/codemirror.css">
+
+		<link rel="stylesheet" href="cm/theme/ambiance.css">
+		<link rel="stylesheet" href="cm/theme/eclipse.css">
+		<link rel="stylesheet" href="cm/theme/monokai.css">
+		<link rel="stylesheet" href="cm/theme/solarized.css">
+		<link rel="stylesheet" href="cm/theme/ambiance-mobile.css">
+		<link rel="stylesheet" href="cm/theme/elegant.css">
+		<link rel="stylesheet" href="cm/theme/neat.css">
+		<link rel="stylesheet" href="cm/theme/twilight.css">
+		<link rel="stylesheet" href="cm/theme/blackboard.css">
+		<link rel="stylesheet" href="cm/theme/erlang-dark.css">
+		<link rel="stylesheet" href="cm/theme/night.css">
+		<link rel="stylesheet" href="cm/theme/vibrant-ink.css">
+		<link rel="stylesheet" href="cm/theme/cobalt.css">
+		<link rel="stylesheet" href="cm/theme/lesser-dark.css">
+		<link rel="stylesheet" href="cm/theme/rubyblue.css">
+		<link rel="stylesheet" href="cm/theme/xq-dark.css">
+
+
+		<script src="cm/lib/codemirror.js"></script>
+		<script src="cm/addon/edit/matchbrackets.js"></script>
+		<script src="cm/addon/edit/continuecomment.js"></script>
+		<script src="cm/mode/javascript/javascript.js"></script>
+
+		<style>
+			body{
+				margin:0px;
+				padding:0px;
+				border:0px;
+				overflow: hidden;
+			}
+		</style>
+
+  		<script src='editor.js'></script>
+	</head>
+	<body style='height:100%' onload='init();'>
+		<div style='float:left;width:800px'><div id="viewer"></div><button onclick='render();'>Render</button></div>
+		<textarea style='float:right' id='code' name='code'>
+
+//Alpha OpenJsCad Editor by Severin Ibarluzea (seveibar)
+
+//Uses OpenJsCad (http://joostn.github.com/OpenJsCad) and CodeMirror (http://codemirror.net)
+
+//Press Ctrl-S or click the render button to execute program
+
+
+//To change editor theme append #THEME at the end your url
+
+//Try themes out at http://codemirror.net/demo/theme.html
+
+
+
+
+function main(){
+  return CSG.cube({radius:5});
+}</textarea>
+	</body>
+</html>
